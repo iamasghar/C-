@@ -35,8 +35,8 @@
                         <td><%# Eval("cell") %></td>
                         <td><%# Eval("address") %></td>
                         <td>
-                            <a href="edituser.aspx?edtusr = <%# Eval("u_id") %> " data-toggle="tooltip" title="Edit"><i class="far fa-edit"></i></a>
-                            <a href="viewcustomers.aspx?dltcus = <%# Eval("u_id") %> "data-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a>
+                            <a href="edituser.aspx?edtusr=<%#Eval("u_id")%>" data-toggle="tooltip" title="Edit"><i class="far fa-edit"></i></a>
+                            <a href="viewcustomers.aspx?dltcus=<%#Eval("u_id")%>"data-toggle="tooltip" title="Delete"><i class="far fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 </ItemTemplate>

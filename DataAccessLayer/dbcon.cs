@@ -12,7 +12,7 @@ namespace DataAccessLayer
     {
         public SqlConnection DbConnection()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=asghar;Initial Catalog=OfcDB;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-UL4JOR7;Initial Catalog=OfcDB;Integrated Security=True");
             return conn;
         }
 
