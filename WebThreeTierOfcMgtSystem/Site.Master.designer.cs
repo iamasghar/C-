@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebThreeTierOfcMgtSystem {
-    
-    
-    public partial class SiteMaster {
-        
+namespace WebThreeTierOfcMgtSystem
+{
+
+
+    public partial class SiteMaster
+    {
+
         /// <summary>
         /// MainContent control.
         /// </summary>
