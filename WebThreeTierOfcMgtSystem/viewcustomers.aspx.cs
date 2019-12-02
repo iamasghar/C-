@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using BusinessLayer;
 using PropsLayer;
-using BusinessLayer;
-using System.Data;
+using System;
+using System.Linq;
 
 namespace WebThreeTierOfcMgtSystem
 {
@@ -19,6 +14,22 @@ namespace WebThreeTierOfcMgtSystem
             UserBLL s = new UserBLL();
             Repeater1.DataSource = s.ALevelUserBLL(up);
             Repeater1.DataBind();
+
+
+            if (Request.Params.AllKeys.Contains("dltcus"))
+            {
+                UserProps u = new UserProps();
+                u.U_id = Request.QueryString["dltcus"];
+                UserBLL ub = new UserBLL();
+                if (ub.deleteUserBLL(u))
+                {
+                    Response.Redirect("viewcustomers.aspx?success=Deleted Successfully");
+                }
+                else
+                {
+                    Response.Redirect("viewcustomers.aspx?error=Something Went Wrong....!");
+                }
+            }
         }
     }
 }

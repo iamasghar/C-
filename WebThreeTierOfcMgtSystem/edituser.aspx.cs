@@ -1,12 +1,7 @@
 ﻿using BusinessLayer;
 using PropsLayer;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebThreeTierOfcMgtSystem
 {
@@ -27,23 +22,24 @@ namespace WebThreeTierOfcMgtSystem
                 email.Text = dt.Rows[0]["email"].ToString();
                 hdnpass.Text = dt.Rows[0]["password"].ToString();
                 address.Text = dt.Rows[0]["address"].ToString();
+
             }
             else
             {
-                Response.Write("<script>alert('Sorry, Something Went Wrong....!')</script>");
+                Response.Redirect("edituser.aspx?error=Sorry, Something Went Wrong....!");
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if(pwd.Text != null || pwd.Text != "")
+            if (pwd.Text != null || pwd.Text != "")
             {
-                if(pwd.Text == cpwd.Text)
+                if (pwd.Text == cpwd.Text)
                 {
                     funs f = new funs();
-                    String pass = f.SHA_256_salted(pwd.Text,email.Text);
+                    String pass = f.SHA_256_salted(pwd.Text, email.Text);
                     String cpass = f.SHA_256_salted(cpwd.Text, email.Text);
-                    if(pass == cpass)
+                    if (pass == cpass)
                     {
                         UserProps u = new UserProps();
                         u.U_id = u_id.Text;
@@ -57,21 +53,21 @@ namespace WebThreeTierOfcMgtSystem
                         UserBLL ubbb = new UserBLL();
                         if (ubbb.updateUserBLL(u))
                         {
-                            Response.Write("<script>alert('User Updated Successfull')</script>");
+                            Response.Redirect("edituser.aspx?success=User Updated Successfull");
                         }
                         else
                         {
-                            Response.Write("<script>alert('Something Went Wrong....!')</script>");
+                            Response.Redirect("edituser.aspx?error=Something Went Wrong....!");
                         }
                     }
                     else
                     {
-                        Response.Write("<script>alert('Hash Doesn't Match.')</script>");
+                        Response.Redirect("edituser.aspx?error=Hash Doesn't Match.");
                     }
                 }
                 else
                 {
-                    Response.Write("<script>alert('Password Doesn't Match.')</script>");
+                    Response.Redirect("edituser.aspx?error=Password Doesn't Match.");
                 }
             }
             else
@@ -88,11 +84,11 @@ namespace WebThreeTierOfcMgtSystem
                 UserBLL ubbb = new UserBLL();
                 if (ubbb.updateUserBLL(u))
                 {
-                    Response.Write("<script>alert('User Updated Successfull')</script>");
+                    Response.Redirect("edituser.aspx?success=User Updated Successfull");
                 }
                 else
                 {
-                    Response.Write("<script>alert('Something Went Wrong....!')</script>");
+                    Response.Redirect("edituser.aspx?error=Something Went Wrong....!");
                 }
             }
         }

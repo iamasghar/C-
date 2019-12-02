@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using BusinessLayer;
 using PropsLayer;
-using BusinessLayer;
+using System;
 
 namespace WebThreeTierOfcMgtSystem
 {
@@ -43,21 +38,21 @@ namespace WebThreeTierOfcMgtSystem
                         Session["U_access_level"] = u.U_access_level;
                         Session["U_id"] = u.U_id;
                         Session["U_name"] = u.U_name;
-                        Response.Write("<script>alert('User Registered Successfull')</script>");
+                        Response.Redirect("adduser.aspx?success=User Registered Successfull");
                     }
                     else
                     {
-                        Response.Write("<script>alert('Something Went Wrong....!  User Registerion Unsuccessfull')</script>");
+                        Response.Redirect("adduser.aspx?error=Something Went Wrong....!  User Registerion Unsuccessfull");
                     }
                 }
                 else
                 {
-                    Response.Write("<script>alert('Hash Doesn't Match.')</script>");
+                    Response.Redirect("adduser.aspx?error=Hash Doesn't Match.");
                 }
             }
             else
             {
-                Response.Write("<script>alert('Password Doesn't Match.')</script>");
+                Response.Redirect("adduser.aspx?error=Password Doesn't Match.");
             }
         }
     }

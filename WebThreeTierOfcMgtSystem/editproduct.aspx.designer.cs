@@ -11,17 +11,17 @@ namespace WebThreeTierOfcMgtSystem
 {
 
 
-    public partial class supplyers
+    public partial class editproduct
     {
 
         /// <summary>
-        /// txt_sid control.
+        /// p_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_sid;
+        protected global::System.Web.UI.WebControls.TextBox p_id;
 
         /// <summary>
         /// hdnpass control.
@@ -33,31 +33,67 @@ namespace WebThreeTierOfcMgtSystem
         protected global::System.Web.UI.WebControls.TextBox hdnpass;
 
         /// <summary>
-        /// txt_name control.
+        /// p_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_name;
+        protected global::System.Web.UI.WebControls.TextBox p_name;
 
         /// <summary>
-        /// txt_cell control.
+        /// p_price control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_cell;
+        protected global::System.Web.UI.WebControls.TextBox p_price;
 
         /// <summary>
-        /// txt_address control.
+        /// p_stock control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_address;
+        protected global::System.Web.UI.WebControls.TextBox p_stock;
+
+        /// <summary>
+        /// expiry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox expiry;
+
+        /// <summary>
+        /// p_manuf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox p_manuf;
+
+        /// <summary>
+        /// hdnimg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox hdnimg;
+
+        /// <summary>
+        /// image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload image;
 
         /// <summary>
         /// Button1 control.

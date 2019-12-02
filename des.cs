@@ -84,5 +84,12 @@ namespace ThreeTierMgtSystem_1701_02_17_09_19_
 
             return message;
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            stored_procedures sd = new stored_procedures();
+            sd.Visible = true;
+        }
     }
 }

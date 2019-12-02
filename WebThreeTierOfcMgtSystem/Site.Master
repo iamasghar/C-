@@ -15,6 +15,7 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
+    <link href="assets/css/toastr.min.css" rel="stylesheet" type="text/css" />
     <script src="assets/js/modernizr.min.js"></script>
     <style>
         .dataTables_filter,
@@ -101,23 +102,49 @@
 
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect waves-primary">
-                                <i class="ti-shine"></i><span>Products </span>
-                            </a>
-                            <ul class="list-unstyled">
-                                <li><a href="addproducts.html">Add</a></li>
-                                <li><a href="editproducts.html">Update / Delete</a></li>
-                                <li><a href="viewproducts.html">View</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect waves-primary">
                                 <i class="ti-shine"></i><span>Users </span>
                             </a>
                             <ul class="list-unstyled">
-                                <li><a href="addusers.html">Add</a></li>
-                                <li><a href="editusers.html">Update / Delete</a></li>
-                                <li><a href="viewusers.html">View</a></li>
+                                <li><a href="adduser.aspx">Add</a></li>
+                                <li><a href="viewadmins.aspx">View Admins</a></li>
+                                <li><a href="viewemployee.aspx">View Employees</a></li>
+                                <li><a href="viewcustomers.aspx">View Customers</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect waves-primary">
+                                <i class="ti-shine"></i><span>Products </span>
+                            </a>
+                            <ul class="list-unstyled">
+                                <li><a href="products.aspx">Add Products</a></li>
+                                <li><a href="viewproducts.aspx">View Products</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect waves-primary">
+                                <i class="ti-shine"></i><span>Sell </span>
+                            </a>
+                            <ul class="list-unstyled">
+                                <li><a href="sales.aspx">Sell Products</a></li>
+                                <li><a href="viewsales.aspx">View Sales</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect waves-primary">
+                                <i class="ti-shine"></i><span>Purchase </span>
+                            </a>
+                            <ul class="list-unstyled">
+                                <li><a href="purchases.aspx">Purchase Products</a></li>
+                                <li><a href="viewpurchase.aspx">View Purchases</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect waves-primary">
+                                <i class="ti-shine"></i><span>Suppliers </span>
+                            </a>
+                            <ul class="list-unstyled">
+                                <li><a href="supplyers.aspx">Add Suppliers</a></li>
+                                <li><a href="viewsuppliers.aspx">View Suppliers</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -212,9 +239,30 @@
 
     <!-- Selection table -->
     <script src="assets/plugins/datatables/dataTables.select.min.js"></script>
-
+    <script src="assets/js/toastr.min.js"></script>
     <script type="text/javascript">
+        function param(name) {
+            return (location.search.split(name + '=')[1] || '').split('&')[0];
+        }
+
+        function rm_space(string) {
+            var st = string;
+            for (var i = 0; i < 10; i++) {
+                st = st.replace("%20", " ");
+            }
+            return st.replace("%20", " ");
+        }
         $(document).ready(function () {
+            // Display a success toast, with a title
+            if (param("success") != null && param("success") != "") {
+                toastr.success(rm_space(param("success")), "Success");
+            }
+            else if (param("error") != null && param("error") != "") {
+                toastr.error(rm_space(param("error")), 'Error');
+            }
+
+
+            // Display an error toast, with a title
 
             // Default Datatable
             $('#datatable').DataTable();

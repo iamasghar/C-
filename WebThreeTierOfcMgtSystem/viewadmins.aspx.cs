@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using BusinessLayer;
+﻿using BusinessLayer;
 using PropsLayer;
+using System;
+using System.Linq;
 
 namespace WebThreeTierOfcMgtSystem
 {
@@ -18,6 +14,21 @@ namespace WebThreeTierOfcMgtSystem
             UserBLL s = new UserBLL();
             Repeater1.DataSource = s.ALevelUserBLL(up);
             Repeater1.DataBind();
+
+            if (Request.Params.AllKeys.Contains("dltadmn"))
+            {
+                UserProps u = new UserProps();
+                u.U_id = Request.QueryString["dltadmn"];
+                UserBLL ub = new UserBLL();
+                if (ub.deleteUserBLL(u))
+                {
+                    Response.Redirect("viewadmins.aspx?success=Deleted Successfully");
+                }
+                else
+                {
+                    Response.Redirect("viewadmins.aspx?error=Something Went Wrong....!");
+                }
+            }
         }
     }
 }

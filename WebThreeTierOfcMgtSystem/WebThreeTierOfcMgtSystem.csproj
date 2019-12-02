@@ -176,6 +176,7 @@
     <Content Include="assets\css\icons.css" />
     <Content Include="assets\css\icons.min.css" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\toastr.min.css" />
     <Content Include="assets\fonts\fa-brands-400.svg" />
     <Content Include="assets\fonts\fa-regular-400.svg" />
     <Content Include="assets\fonts\fa-solid-900.svg" />
@@ -248,6 +249,7 @@
     <Content Include="assets\js\jquery.slimscroll.js" />
     <Content Include="assets\js\modernizr.min.js" />
     <Content Include="assets\js\popper.min.js" />
+    <Content Include="assets\js\toastr.min.js" />
     <Content Include="assets\js\waves.js" />
     <Content Include="assets\js\wow.min.js" />
     <Content Include="assets\pages\datatables.editable.init.js" />
@@ -495,6 +497,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="editproduct.aspx" />
+    <Content Include="editsupplyer.aspx" />
     <Content Include="edituser.aspx" />
     <Content Include="EmployeeForm.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -611,6 +615,10 @@
     <Content Include="viewadmins.aspx" />
     <Content Include="viewcustomers.aspx" />
     <Content Include="viewemployee.aspx" />
+    <Content Include="viewproducts.aspx" />
+    <Content Include="viewpurchase.aspx" />
+    <Content Include="viewsales.aspx" />
+    <Content Include="viewsuppliers.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -733,6 +741,7 @@
     </Compile>
     <Compile Include="adduser.aspx.cs">
       <DependentUpon>adduser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="adduser.aspx.designer.cs">
       <DependentUpon>adduser.aspx</DependentUpon>
@@ -748,8 +757,23 @@
     <Compile Include="customer.aspx.designer.cs">
       <DependentUpon>customer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="editproduct.aspx.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editproduct.aspx.designer.cs">
+      <DependentUpon>editproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editsupplyer.aspx.cs">
+      <DependentUpon>editsupplyer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editsupplyer.aspx.designer.cs">
+      <DependentUpon>editsupplyer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="edituser.aspx.cs">
       <DependentUpon>edituser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="edituser.aspx.designer.cs">
       <DependentUpon>edituser.aspx</DependentUpon>
@@ -829,21 +853,52 @@
     </Compile>
     <Compile Include="viewadmins.aspx.cs">
       <DependentUpon>viewadmins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="viewadmins.aspx.designer.cs">
       <DependentUpon>viewadmins.aspx</DependentUpon>
     </Compile>
     <Compile Include="viewcustomers.aspx.cs">
       <DependentUpon>viewcustomers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="viewcustomers.aspx.designer.cs">
       <DependentUpon>viewcustomers.aspx</DependentUpon>
     </Compile>
     <Compile Include="viewemployee.aspx.cs">
       <DependentUpon>viewemployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="viewemployee.aspx.designer.cs">
       <DependentUpon>viewemployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewproducts.aspx.cs">
+      <DependentUpon>viewproducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewproducts.aspx.designer.cs">
+      <DependentUpon>viewproducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewpurchase.aspx.cs">
+      <DependentUpon>viewpurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewpurchase.aspx.designer.cs">
+      <DependentUpon>viewpurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewsales.aspx.cs">
+      <DependentUpon>viewsales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewsales.aspx.designer.cs">
+      <DependentUpon>viewsales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewsuppliers.aspx.cs">
+      <DependentUpon>viewsuppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewsuppliers.aspx.designer.cs">
+      <DependentUpon>viewsuppliers.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

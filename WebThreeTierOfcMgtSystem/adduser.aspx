@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputAddress" class="col-form-label">Address</label>
-                    <asp:TextBox ID="address" parsley-trigger="change" required class="form-control" placeholder="Address " runat="server">asa,sdwe, rf r.ert re651</asp:TextBox>
+                    <asp:TextBox ID="address" parsley-trigger="change" required class="form-control" placeholder="Address " runat="server"></asp:TextBox>
                 </div>
                 <asp:Button ID="Button1" class="btn btn-primary btn-block" runat="server" Text="Submit" OnClick="Button1_Click" />
             </div>

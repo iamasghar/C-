@@ -59,12 +59,6 @@
       <DependentUpon>des.cs</DependentUpon>
     </Compile>
     <Compile Include="dess.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Hash_SHA-256.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,14 +67,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stored_procedures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stored_procedures.Designer.cs">
+      <DependentUpon>stored_procedures.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="des.resx">
       <DependentUpon>des.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hash_SHA-256.resx">
       <DependentUpon>Hash_SHA-256.cs</DependentUpon>
@@ -94,6 +91,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="stored_procedures.resx">
+      <DependentUpon>stored_procedures.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

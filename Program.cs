@@ -16,7 +16,7 @@ namespace ThreeTierMgtSystem_1701_02_17_09_19_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new des());
+            Application.Run(new stored_procedures());
         }
     }
 }

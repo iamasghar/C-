@@ -117,8 +117,7 @@ namespace ThreeTierMgtSystem_1701_02_17_09_19_
 
         private void label7_Click(object sender, EventArgs e)
         {
-            new Form1().Show();
-            this.Hide();
+
         }
     }
 }

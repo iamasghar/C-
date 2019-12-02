@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="edituser.aspx.cs" Inherits="WebThreeTierOfcMgtSystem.edituser" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
         <div class="col-12">
@@ -20,22 +21,22 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4" class="col-form-label">Admin Id<span class="text-danger">*</span></label>
-                        <asp:TextBox ID="u_id"  parsley-trigger="change" required class="form-control" placeholder=" User Id " runat="server"></asp:TextBox>
+                        <asp:TextBox ID="u_id" parsley-trigger="change" ReadOnly class="form-control" placeholder=" User Id " runat="server"></asp:TextBox>
                     </div>
-                    <asp:TextBox ID="hdnpass" style="display:none;" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="hdnpass" Style="display: none;" runat="server"></asp:TextBox>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4" class="col-form-label">Name<span class="text-danger">*</span></label>
-                        <asp:TextBox ID="name" parsley-trigger="change" required class="form-control" placeholder="Name " runat="server"></asp:TextBox>
+                        <asp:TextBox ID="name" parsley-trigger="change" required="" class="form-control" placeholder="Name " runat="server"></asp:TextBox>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4" class="col-form-label">Cnic<span class="text-danger">*</span></label>
-                        <asp:TextBox ID="cnic" parsley-trigger="change" required class="form-control" placeholder="Cnic " runat="server" TextMode="Number"></asp:TextBox>
+                        <asp:TextBox ID="cnic" parsley-trigger="change" required="" class="form-control" placeholder="Cnic " runat="server" TextMode="Number"></asp:TextBox>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4" class="col-form-label">Email<span class="text-danger">*</span></label>
-                        <asp:TextBox ID="email" parsley-trigger="change" required class="form-control" placeholder="Email " runat="server" TextMode="Email"></asp:TextBox>
+                        <asp:TextBox ID="email" parsley-trigger="change" required="" class="form-control" placeholder="Email " runat="server" TextMode="Email"></asp:TextBox>
                     </div>
                 </div>
                 <div class="form-row">
@@ -51,11 +52,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputCity" class="col-form-label">Phone Number<span class="text-danger">*</span></label>
-                        <asp:TextBox ID="cell" parsley-trigger="change" required class="form-control" placeholder="Phone Number " runat="server" TextMode="Phone"></asp:TextBox>
+                        <asp:TextBox ID="cell" parsley-trigger="change" required="" class="form-control" placeholder="Phone Number " runat="server" TextMode="Phone"></asp:TextBox>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputState" class="col-form-label">Access Level<span class="text-danger">*</span></label>
-                        <asp:DropDownList parsley-trigger="change" required ID="access_level" class="form-control" runat="server">
+                        <asp:DropDownList parsley-trigger="change" required="" ID="access_level" class="form-control" runat="server">
                             <%--                            <asp:ListItem Selected="True" Value="0">  -- Select --</asp:ListItem>--%>
                             <asp:ListItem Value="1">Admin</asp:ListItem>
                             <asp:ListItem Value="2">Employee</asp:ListItem>

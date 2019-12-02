@@ -39,6 +39,7 @@
             this.enc = new System.Windows.Forms.TextBox();
             this.pwd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dec
@@ -135,11 +136,22 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Password :";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, -1);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 17);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // des
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 237);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.pwd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
@@ -171,5 +183,6 @@
         private System.Windows.Forms.TextBox enc;
         private System.Windows.Forms.TextBox pwd;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

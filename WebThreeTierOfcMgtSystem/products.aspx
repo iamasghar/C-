@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="products.aspx.cs" Inherits="WebThreeTierOfcMgtSystem.products" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row">
+    <%--    <div class="row">
         <div class="col-sm-12">
             <div class="page-title-box">
                 <h4 class="page-title">View Products</h4>
@@ -89,34 +89,63 @@
     </div>
 
     <div class="row">
-        <table id="datatable" class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Image</th>
-                    <th>Title</th>
-                    <th>Price</th>
-                    <th>Stock</th>
-                    <th>Expairy</th>
-                    <th>Manuf</th>
-                </tr>
-            </thead>
-            <tbody>
-                <asp:Repeater ID="Repeater1" runat="server">
-                    <ItemTemplate>
-                        <tr>
-                            <td><%# Eval("prd_id") %></td>
-                            <td style="padding: 5px;">
-                                <img src="/upload/<%# Eval("img") %>" style="width: 70px; height: 45px;" /></td>
-                            <td><%# Eval("prd_title") %></td>
-                            <td><%# Eval("prd_price") %></td>
-                            <td><%# Eval("prd_stock") %></td>
-                            <td><%# Eval("prd_expiry") %></td>
-                            <td><%# Eval("prd_manufacturer") %></td>
-                        </tr>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </tbody>
-        </table>
+    </div>--%>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <h4 class="page-title">Add Products</h4>
+                <ol class="breadcrumb float-right">
+                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Add Products</li>
+                </ol>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-box">
+                <h4 class="header-title">Product Info</h4>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" class="col-form-label">Id<span class="text-danger">*</span></label>
+                        <asp:TextBox ID="p_id" parsley-trigger="change" required="" class="form-control" placeholder=" Product Id " runat="server"></asp:TextBox>
+                    </div>
+                    <asp:TextBox ID="hdnpass" Style="display: none;" runat="server"></asp:TextBox>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4" class="col-form-label">Name<span class="text-danger">*</span></label>
+                        <asp:TextBox ID="p_name" parsley-trigger="change" required="" class="form-control" placeholder="Name " runat="server"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" class="col-form-label">Price <span class="text-danger">*</span></label>
+                        <asp:TextBox ID="p_price" parsley-trigger="change" required="" class="form-control" placeholder="Price " runat="server" TextMode="Number"></asp:TextBox>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" class="col-form-label">Stock <span class="text-danger">*</span></label>
+                        <asp:TextBox ID="p_stock" parsley-trigger="change" required="" class="form-control" placeholder="Stock " runat="server" TextMode="Number"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" class="col-form-label">Expiry <span class="text-danger">*</span></label>
+                        <asp:TextBox ID="expiry" parsley-trigger="change" required="" class="form-control" placeholder="22/06/2999 " runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4" class="col-form-label">Manufactured By<span class="text-danger">*</span></label>
+                        <asp:TextBox ID="p_manuf" parsley-trigger="change" required="" class="form-control" placeholder="Manufactured By " runat="server"></asp:TextBox>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4" class="col-form-label">Image</label>
+                        <asp:FileUpload ID="image" parsley-trigger="change" required="" class="form-control btn-block btn-dark" runat="server" />
+                    </div>
+                </div>
+                <asp:Button ID="Button1" class="btn btn-primary btn-block" runat="server" Text="Submit" OnClick="Insert_Click" />
+            </div>
+        </div>
     </div>
 </asp:Content>

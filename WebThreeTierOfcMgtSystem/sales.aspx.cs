@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using BusinessLayer;
 using PropsLayer;
-using BusinessLayer;
+using System;
 using System.Data;
 
 namespace WebThreeTierOfcMgtSystem
@@ -26,7 +21,7 @@ namespace WebThreeTierOfcMgtSystem
             if (dt.Rows.Count > 0)
             {
                 //products.Items.Clear();
-                for (int i=0;i< dt.Rows.Count; i++)
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     products.Items.Add(dt.Rows[i]["prd_title"].ToString());
                 }
@@ -62,7 +57,7 @@ namespace WebThreeTierOfcMgtSystem
             }
             */
         }
-        
+
 
         protected void products_SelectedIndexChanged(object sender, EventArgs e)
         {
